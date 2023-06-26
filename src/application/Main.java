@@ -41,13 +41,15 @@ public class Main extends Application {
         button.setLayoutX(253);
         button.setLayoutY(285);
         button.setOnAction(e -> {
+		PlaySong buttonClicked=new PlaySong("ClickButton",false);
+		buttonClicked.start();
         	primaryStage.close();
         	try {
-				startGame();
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+			startGame();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
         });
 
         root.getChildren().addAll(label, button);
